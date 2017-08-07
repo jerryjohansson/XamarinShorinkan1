@@ -1,0 +1,59 @@
+﻿
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<head>
+
+		<style>
+			#contain { width:300px;}
+			#leftdiv { width: 50px;  float: left;}
+			#rightdiv { width: 250px;  float: left;}
+			.clear {clear:both;}
+			body {
+			    font-size: 60%;
+			}			
+		</style>
+		
+		<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script> 
+		<script type='text/javascript'>      
+			google.charts.load('current', {'packages':['corechart']});       
+			google.charts.setOnLoadCallback(drawChart);       
+			
+			function drawChart() {         
+				var data = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      11],           
+						['Warning',  2],           
+						['Clear', 15]           
+						]);          
+
+				var options = {          
+							title: 'My Obligations',
+							pieHole: 0.4,
+				};         
+
+				var chart = new google.visualization.PieChart(document.getElementById('piechart')); 
+
+				chart.draw(data, options);       
+			}     
+		</script>  
+	</head>
+	<body>
+		 
+	
+
+			<div id="contain">
+				<div id="leftdiv">
+					<br/>
+					<br/>
+					<br/>
+					<a href='goto://Test1'>11 Breaches</a> <br/> 
+					<a href='goto://Test2'>2 Warnings </a>  
+				</div>
+				<div id="rightdiv">
+					<div id='piechart' style='width: 300px; height: 200px;'></div>
+				</div>
+			</div>		
+	</body>
+</html>
+

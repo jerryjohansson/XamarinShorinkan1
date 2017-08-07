@@ -1,0 +1,143 @@
+﻿
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<head>
+
+		<style>
+			#contain { width:300px;}
+			#leftdiv { width: 150px;  float: left;}
+			#rightdiv { width: 150px;  float: left;}
+			.clear {clear:both;}
+		</style>
+		
+		<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script> 
+		<script type='text/javascript'>      
+			google.charts.load('current', {'packages':['corechart']});       
+			google.charts.setOnLoadCallback(drawChart);       
+			
+			function drawChart() {         
+				var data = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      11],           
+						['Warning',  2],           
+						['Clear', 15]           
+						]);          
+						
+				var data2 = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      3],           
+						['Warning',  12],           
+						['Clear', 25]           
+						]);     						
+						
+				var data3 = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      13],           
+						['Warning',  22],           
+						['Clear', 55]           
+						]);   
+						
+						
+				var data4 = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      3],           
+						['Warning',  12],           
+						['Clear', 65]           
+						]);   
+						
+						
+				var data5 = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      5],           
+						['Warning',  10],           
+						['Clear', 45]           
+						]);   						
+						
+						
+						
+				var data6 = google.visualization.arrayToDataTable([           
+						['Task', 'Hours per Day'],           
+						['N/A',     0],           
+						['Breach',      6],           
+						['Warning',  2],           
+						['Clear', 11]           
+						]);   						
+						
+				var options = {          
+							title: 'Site A',
+							pieHole: 0.4,
+				};         
+
+				var options2 = {          
+							title: 'Site B',
+							pieHole: 0.4,
+				};				
+				var options3 = {          
+							title: 'Site C',
+							pieHole: 0.4,
+				};				
+				var options4 = {          
+							title: 'Site D',
+							pieHole: 0.4,
+				};				
+				var options5 = {          
+							title: 'Site E',
+							pieHole: 0.4,
+				};				
+				var options6 = {          
+							title: 'Site F',
+							pieHole: 0.4,
+				};				
+				
+				var chart = new google.visualization.PieChart(document.getElementById('piechart')); 
+				chart.draw(data, options);   
+
+				var chart2 = new google.visualization.PieChart(document.getElementById('piechart2')); 
+				chart2.draw(data2, options2);  
+				
+				var chart3 = new google.visualization.PieChart(document.getElementById('piechart3')); 
+				chart3.draw(data3, options3);  
+				
+				var chart4 = new google.visualization.PieChart(document.getElementById('piechart4')); 
+				chart4.draw(data4, options4);   
+
+				var chart5 = new google.visualization.PieChart(document.getElementById('piechart5')); 
+				chart5.draw(data5, options5);  
+				
+				var chart6 = new google.visualization.PieChart(document.getElementById('piechart6')); 
+				chart6.draw(data6, options6);  
+			}     
+		</script>  
+	</head>
+	<body>
+		 
+	
+
+			<div id="contain">
+				<div id="leftdiv">
+					<a href='goto://Test1'>Site A</a> <br/> 
+					<div id='piechart' style='width: 150px; height: 150px;'></div>
+					<a href='goto://Test2'>Site B </a> 
+					<div id='piechart2' style='width: 150px; height: 150px;'></div>
+					<a href='goto://Test2'>Site C </a> 
+					<div id='piechart3' style='width: 150px; height: 150px;'></div>					
+ 
+				</div>
+				<div id="rightdiv">
+					<a href='goto://Test1'>Site D</a> <br/> 
+					<div id='piechart4' style='width: 150px; height: 150px;'></div>
+					<a href='goto://Test2'>Site E </a> 
+					<div id='piechart5' style='width: 150px; height: 150px;'></div>
+					<a href='goto://Test2'>Site F </a> 
+					<div id='piechart6' style='width: 150px; height: 150px;'></div>					
+ 
+				</div>
+			</div>		
+	</body>
+</html>
+
